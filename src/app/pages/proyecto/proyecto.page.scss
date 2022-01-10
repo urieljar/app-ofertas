@@ -1,0 +1,19 @@
+.alert-danger {
+  .my-custom-class {
+      .alert-wrapper {
+        .alert-head {
+            // header styling here eg. background
+            background: #26C6DA;
+            text-decoration-color: #ffffff;
+            h2 {
+                // header text styling here eg. color, font size
+                font-size: 1em;
+                text-align: center;
+            }
+            button{
+              color: red;
+           }
+        }
+      }
+    }
+}

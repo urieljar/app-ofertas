@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "home-outline",
+    "name": "Inicio",
+    "redirectTo":"/home"
+  },
+    {
+      "icon": "id-card-outline",
+      "name": "Tarjetas Proveedores",
+      "redirectTo":"/tarjeta"
+    },
+    {
+        "icon": "layers-outline",
+        "name": "Proyectos",
+        "redirectTo":"/proyecto"
+      },
+      {
+        "icon": "mail-outline",
+        "name": "Solicitudes",
+        "redirectTo":"/solicitud"
+      }
+]

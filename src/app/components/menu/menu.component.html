@@ -1,0 +1,29 @@
+<ion-menu side="start" contentId="menu-content" menuId="menu-content" >
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item routerLink="/home">
+          <ion-icon slot="start" color="primary" name="home-outline"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+        <ion-item routerLink="./proyecto">
+          <ion-icon slot="start" color="primary" name="layers-outline"></ion-icon>
+          <ion-label>Proyecto</ion-label>
+        </ion-item>
+        <ion-item routerLink="/tarjeta">
+          <ion-icon slot="start" color="primary" name="id-card-outline"></ion-icon>
+          <ion-label>Tarjeta</ion-label>
+        </ion-item>
+        <ion-item routerLink="/solicitud">
+          <ion-icon slot="start" color="primary" name="mail-outline"></ion-icon>
+          <ion-label>Solicitud</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

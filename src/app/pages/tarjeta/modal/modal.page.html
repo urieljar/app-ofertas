@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align:center">Tarjeta</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tarjeta" color="primary">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-input [(ngModel)]="tarjeta.categoria" name="categoria" type="text" placeholder="Ingrese la categoria o el tipo de empresa" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Subcategoria</ion-label>
+      <ion-input type="text" [(ngModel)]="tarjeta.subcategoria" name="subcategoria" placeholder="Ingrese la subcategoria en la que pertenece la empresa" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input  type="text" [(ngModel)]="tarjeta.nombre" name="nombre" placeholder="Ingrese el nombre de la empresa" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">RFC</ion-label>
+      <ion-input  type="text" [(ngModel)]="tarjeta.rfc" name="rfc"placeholder="Ingrese el RFC de la empresa" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefono</ion-label>
+      <ion-input  type="number" [(ngModel)]="tarjeta.telefono" name="telefono" placeholder="Ingrese el telefono de la empresa" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contacto</ion-label>
+      <ion-input type="text" [(ngModel)]="tarjeta.contacto" name="contacto" placeholder="Ingrese el contacto del personal" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefono de contacto</ion-label>
+      <ion-input type="number" [(ngModel)]="tarjeta.tel_contacto" name="tel_contacto" placeholder="Ingrese el telefono de contacto" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email de contacto</ion-label>
+      <ion-input type="email" [(ngModel)]="tarjeta.email_contacto" name="email_contacto" placeholder="Ingres el contacto email"required ></ion-input>
+    </ion-item>
+    <ion-button [disabled]="formulario.invalid" type="submit" expand="block" class="ion-margin-top">
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>

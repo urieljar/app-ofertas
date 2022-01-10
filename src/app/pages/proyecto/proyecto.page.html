@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+
+      <ion-buttons slot="start">
+        <ion-menu-button menu="menu-content"></ion-menu-button>
+      </ion-buttons>
+      <!--
+      <ion-button (click)="mostrarMenu()"  menu="menuId">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>-->
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button mode="ios" routerLink="/inicio">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align:center">Proyecto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>{{mensaje}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-card ion-card *ngFor="let cc of proyectoInterface; let i = index">
+    <ion-card-header color="primary">
+      <ion-card-title> {{cc.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <br>
+      <h2> {{cc.descripcion}}</h2>
+    </ion-card-content>
+    <ion-footer>
+      <ion-row>
+        <ion-col >
+          <ion-button  (click)="editar(cc,i)" fill="outline" shape="round" color= "success">
+            Editar
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="eliminar(cc,i)" fill="outline" shape="round" color= "danger">
+            Eliminar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" (click)="agregar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

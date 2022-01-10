@@ -1,0 +1,38 @@
+<ion-header>
+  
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="menu-content"></ion-menu-button>
+      </ion-buttons>
+      <!--
+      <ion-button (click)="mostrarMenu()"  menu="menuId">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>-->
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button mode="ios" (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div id="container">
+      <h1>App solicitud de ofertas a proveedores</h1>
+      <div>
+        <img src="assets/icon/favicon.png">
+      </div>
+      
+    <strong class="capitalize ion-padding">Este es una app creado para la empresa que quieren solcitar algun trabajo en particular</strong>
+    <p class="ion-padding">
+      Para crear la solicitud es necesario tener registros de tarjetas de proveedores y resgistros de proyectos.
+    </p>
+    <p class="ion-padding">
+      Por el momento no se muestra la parte de solicitud, estamos en fase de desarrollo de la interfaz.
+    </p>
+  </div>
+</ion-content>

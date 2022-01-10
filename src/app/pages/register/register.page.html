@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Regresar"
+        color="primary"
+        mode="ios"
+        defaultHref="/"
+      ></ion-back-button>
+    </ion-buttons>
+
+    <!-- Button 
+     
+    <ion-buttons slot="end">
+      <ion-button color="dark" routerLink="/inicio">
+        Iniciar sesion
+      </ion-button>
+    </ion-buttons>
+     -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Crea tu <br/>Cuenta Nueva</h1>
+<form id="form" (ngSubmit)="registro( fRegistro )" #fRegistro= "ngForm">
+  <ion-item>
+    <ion-input name="name" type="text" [(ngModel)]="registerUser.name" placeholder="Nombre" required></ion-input>
+  </ion-item>
+ <ion-item>
+  <ion-input name="email" type="email" [(ngModel)]="registerUser.email" placeholder="Email" required></ion-input>
+ </ion-item>
+ <ion-item>
+  <ion-input name="password" type= "password" [(ngModel)]="registerUser.password" placeholder="Password" required></ion-input>
+ </ion-item>
+  <ion-button expand="block" type="submit" shape="round" >
+    Registrar
+  </ion-button>
+</form>
+<p> Preciona registrar para agregar una cuenta nueva. <br> Acepta terminos & condiciones.</p>
+</ion-content>
+

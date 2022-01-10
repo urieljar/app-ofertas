@@ -1,0 +1,43 @@
+<ion-header [translate]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="menu-content"></ion-menu-button>
+      </ion-buttons>
+      <!--
+      <ion-button (click)="mostrarMenu()"  menu="menuId">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>-->
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button mode="ios" routerLink="/inicio">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align:center">Tarjeta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+      <ion-item-sliding *ngFor="let tarjeta of tarjetas; let i = index">
+        <ion-item (click)="editar(tarjeta)" >
+          <ion-label>
+            <h2>{{tarjeta.categoria}}</h2>
+            <p>Subcategoria: {{tarjeta.subcategoria}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="start" (click)="borrar(tarjeta,i)">
+          <ion-item-option color="danger">
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+  
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" (click)="agregar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-button color="primary" routerLink="/register">
+        <ion-text color="primary" slot="start">
+          Registrar
+        </ion-text>
+        <ion-icon  slot="end" name="chevron-forward-outline"> </ion-icon>
+      </ion-button>
+     
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div id= "header">
+  <h1>Login</h1>
+  <img src="assets/user.png">
+</div>
+
+<form (ngSubmit)="login(fLogin)" #fLogin="ngForm" id="form">
+  <ion-item >
+    <ion-input name="email" type="email" [(ngModel)]="loginUser.email" placeholder="Email" required></ion-input>
+  </ion-item>
+ <ion-item>
+  <ion-input name="password" type= "password" [(ngModel)]="loginUser.password" placeholder="Password" required></ion-input>
+ </ion-item>
+  <ion-button expand="block" shape="round" type="submit">
+    Login 
+  </ion-button>
+  <ion-button expand="block"  shape="round" routerLink="/register">
+    Registrate
+  </ion-button>
+</form>
+</ion-content>
